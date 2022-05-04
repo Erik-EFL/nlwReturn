@@ -2,7 +2,9 @@ import bugImageUrl from '../assets/bug.svg';
 import ideaImageUrl from '../assets/idea.svg';
 import thoughtImageUrl from '../assets/outro.svg';
 
-export const feedbackTypes = {
+export type feedbackTypes = keyof typeof FeedbackType;
+
+export const FeedbackType = {
   BUG:{
     title: 'Problema',
     image: {
