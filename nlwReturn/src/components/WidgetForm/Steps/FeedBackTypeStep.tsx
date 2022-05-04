@@ -9,7 +9,7 @@ export function FeedBackTypeStep({onClickFeedBackChanged}: FeedBackTypeProps) {
   return(
     <>
     <header>
-      <span className="text-sl leading-6">Deixe seu Feedback</span>
+      <span className="text-sl leading-6">Deixe o seu Feedback</span>
       <CloseButton />
     </header>
     <div className="flex py-8 gap-2 w-full">
@@ -20,7 +20,6 @@ export function FeedBackTypeStep({onClickFeedBackChanged}: FeedBackTypeProps) {
             onClick={ () => onClickFeedBackChanged(key as feedbackTypes) }
             type="button"
             >
-              
               <img src={value.image.source} alt={value.image.alt} />
               <span>{value.title}</span>
             </button>
