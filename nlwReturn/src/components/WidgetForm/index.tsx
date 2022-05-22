@@ -6,6 +6,11 @@ import { FeedBackTypeStep } from "./Steps/FeedBackTypeStep";
 export function WidgetForm() {
   const [feedBackType, setFeedBackType] = useState<feedbackTypes | null>(null);
 
+  /* seta i esta para null assim a pagina do widget volta ao estado inicial */
+  function handleRestartFeedBack() {
+    setFeedBackType(null);
+  }
+
   return(
   <div 
   className="bg-zinc-900 p-4
@@ -18,7 +23,10 @@ export function WidgetForm() {
       <FeedBackTypeStep onClickFeedBackChanged={ setFeedBackType } />
     )
       : (
-        <FeedBackContentStep />
+        <FeedBackContentStep 
+          feedbackType={feedBackType} 
+          onClickRestartFeedBack={ handleRestartFeedBack }
+        />
       )
   }
     <footer>
